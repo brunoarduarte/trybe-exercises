@@ -1,8 +1,0 @@
-O que você aprenderá na trybe:
-
-Unix
-Bash
-Git
-HTML
-CSS
-JavaScript
