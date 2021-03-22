@@ -1,0 +1,18 @@
+h1,
+p {
+    text-align: center;
+}
+
+li:hover {
+    background-color: green;
+}
+
+li:active {
+    font-family: 'Chango', cursive;
+    font-weight: bolder;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
