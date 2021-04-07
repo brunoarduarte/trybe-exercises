@@ -93,6 +93,16 @@
       newImg.src = 'https://picsum.photos/200';
       newDiv3.appendChild(newImg);
 
+      //Exercise 8
+      let newUList = document.createElement('ul');
+      newDiv4.appendChild(newUList);
+      
+      let oneToTen = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for (let index = 0; index < oneToTen.length; index += 1) {
+        let elementList = document.createElement('li');
+        elementList.innerText = oneToTen[index];
+        newUList.appendChild(elementList)
+      }
       
     </script>
   </body>
