@@ -60,13 +60,12 @@
       //Exercise 1
       let header = document.createElement('h1');
       header.innerText = 'Exercício 5.2 - JavaScript DOM';
-      let escope = document.querySelector('body');
-      escope.appendChild(header);
+      document.body.appendChild(header);
 
       //Exercise 2
       let newDiv = document.createElement('div');
       newDiv.className ='main-content';
-      escope.appendChild(newDiv);
+      document.body.appendChild(newDiv);
 
       //Exercise 3
       let newDiv2 = document.createElement('div');
@@ -88,6 +87,13 @@
       newDiv4.className ='right-content';
       newDiv.appendChild(newDiv4);
 
+      //Exercise 7
+      let newImg = document.createElement('img');
+      newImg.className = 'small-image';
+      newImg.src = 'https://picsum.photos/200';
+      newDiv3.appendChild(newImg);
+
+      
     </script>
   </body>
 </html>
