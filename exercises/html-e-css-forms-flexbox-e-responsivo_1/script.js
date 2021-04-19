@@ -58,16 +58,19 @@ checkEmail();
 function renderCurriculum(event) {
   event.preventDefault();
   const formElements = document.querySelectorAll('input');
-  for (let index = 0; index < formElements.length; index += 1) {
+  const jobsElements = document.querySelectorAll('.insert-text')
+  for (let index = 0; index < formElements.length && jobsElements.length; index += 1) {
     if (formElements[index].type === 'radio' && !formElements[index].checked) {
       continue;
     }
     const userInput = formElements[index].value;
+    const jobText = jobsElements[index].value;
     const dataUser = document.querySelector('.form-data');
     if (checkEmail() && checkData()) {
       const newDiv = document.createElement('div');
       newDiv.className = 'div-curriculum';
       newDiv.innerHTML = userInput;
+      newDiv.innerHTML += jobText;
       dataUser.appendChild(newDiv);
     }
   }
@@ -76,13 +79,10 @@ function renderCurriculum(event) {
 const clearButton = document.querySelector('.clear-button');
 function clearFields() {
   const formElements = document.querySelectorAll('input');
-  const textField = document.querySelectorAll('textArea');
+  const textField = document.querySelectorAll('.insert-text');
   const div = document.querySelectorAll('.div-curriculum');
-  for (let index = 0; index < formElements.length && index < div.length && index < textField.length; index += 1) {
-    const userInput = formElements[index];
-    userInput.value = '';
-    textField.value = '';
-    div[index].innerText = '';
+  for (let index = 0; index < div.length; index += 1) { 
+      div[index].innerText = '';   
   }
 }
 
