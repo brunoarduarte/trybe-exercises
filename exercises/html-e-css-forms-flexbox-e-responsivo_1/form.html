@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+  <h1>Curriculum vitæ</h1>
+  <form action="" class="form-data" method="GET" enctype="multipart/form-data">
+    <fieldset id="pessoal-dates">
+      <label for="inpname">Digite seu nome:
+      <input type="text" name="inpname" id="inpname" maxlength="50" required>
+      </label> 
+      <br><br>
+      <label for="e-mail">Digite seu e-mail:
+        <input type="text" class="email-input" name="e-mail" id="e-mail" axlength="50" required>
+      </label>
+      <br><br>
+      <label for="cpf-input">Digite o seu CPF(somente números):
+        <input type="text" name="cpf" maxlength="11" id="cpf-input" value='' onpaste="return false" required>
+      </label>
+      <br><br>
+      <label for="endereco">Digite seu endereço:
+          <input type="text" name="endereco" id="endereco" maxlength="200" required>
+      </label>
+      <br><br>
+      <label for="cidade">Informe sua cidade:
+        <input type="text" name="cidade" id="cidade" maxlength="28" required>
+      </label>
+      <br><br>
+      <select name="estado" id="estado"></select>
+      <br><br>
+      <label for="residencia1">
+        <input type="radio" name="residencia" id="residencia1">Casa
+      </label>
+      <label for="residencia2">
+        <input type="radio" name="residencia" id="residencia2">Apartamento
+      </label>
+    </fieldset>
+    <br><br>
+    <fieldset id="last-job">
+      <p>Resumo do Currículo:</p>
+      <textarea class="insert-text" name="descricao" id="description" cols="30" rows="10"maxlength="1000"  required></textarea>
+      <br><br>
+      <p>Cargo:</p>
+      <textarea class="insert-text" name="cargo" id="last-function" cols="30" rows="10" maxlength="40"></textarea>
+      <br><br>
+      <p>Descrição do cargo:</p>
+      <textarea class="insert-text" name="competencias" id="job-fuctions" cols="30" rows="10"    maxlength="500"></textarea>
+      <br><br>
+      <label for="begin-date">Data de Início:
+          <input type="text" class="input-data insert-text" name="data-inicio" id="begin-date"  required>
+      </label>
+    </fieldset>
+      <button type="submit" class="submit-button" id="submit-button">Enviar</button>
+      <button type="reset" class="clear-button" id='clean-button'>Limpar</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
