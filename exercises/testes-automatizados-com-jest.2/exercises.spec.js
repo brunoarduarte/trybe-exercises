@@ -23,3 +23,20 @@ describe('A função getUserName', () => {
       expect(error).toEqual({ error: 'User with 3 not found.' }))
   });
 });
+
+// Exercício 3
+describe('A função getUserName', () => {
+  test('Retorna o user name', async () => {
+    expect.assertions(1);
+    const response = await getUserName(4);
+    expect(response).toEqual('Mark');
+  });
+  test('Retorna erro se o id não existir', async () => {
+    expect.assertions(1);
+    try {
+      await getUserName(3);
+    } catch (error) {
+      expect(error).toEqual({ error: 'User with 3 not found.' })
+    }
+  });
+});
