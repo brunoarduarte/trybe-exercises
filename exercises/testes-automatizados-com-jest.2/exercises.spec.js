@@ -12,3 +12,14 @@ describe('A função uppercase', () => {
 });
 
 // Exercício 2
+describe('A função getUserName', () => {
+  test('Retorna o user name', () => {
+    expect.assertions(1);
+    return getUserName(4).then(response => expect(response).toEqual('Mark'))
+  });
+  test('Retorna erro se o id não existir', () => {
+    expect.assertions(1);
+    return getUserName(3).catch(error =>
+      expect(error).toEqual({ error: 'User with 3 not found.' }))
+  });
+});
